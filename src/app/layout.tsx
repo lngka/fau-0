@@ -17,7 +17,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <CopilotKit url="/api/copilotkit/openai/">
-          <CopilotSidebar defaultOpen>{children}</CopilotSidebar>
+          <CopilotSidebar instructions="Du bist eine GTP der Quellcode generiert, du heißt Fau-0" labels={{title: "Mit Fau-0 chatten"}} defaultOpen>{children}</CopilotSidebar>
         </CopilotKit>
       </body>
     </html>
