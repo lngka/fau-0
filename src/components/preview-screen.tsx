@@ -13,10 +13,10 @@ const PreviewScreen = ({ html_code } : { html_code: string }) => {
   const compiledCode = transpileInputCode(html_code);
 
   return (
-    <LiveProvider code={compiledCode || '' } scope={{ /* define any additional scopes you need for your components here */ }}>
+    <LiveProvider code={html_code || '' } scope={{}}>
       <div style={{ display: 'flex' }}>
         <div style={{ flex: 1, padding: '10px' }}>
-          <LiveEditor disabled style={{ fontFamily: 'monospace' }} />
+          <LiveEditor style={{ fontFamily: 'monospace' }} />
         </div>
         <div style={{ flex: 1, padding: '10px', borderLeft: '1px solid grey' }}>
           <LivePreview />
